@@ -1,0 +1,57 @@
+name: Bug Report YAML
+description: Report a bug.
+title: "[Bug]:"
+labels: ["bug"]
+assignees:
+  - carslo_45
+
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Describe the bug
+      description: A clear and concise description of what the bug is.
+      placeholder: A bug.
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: A step by step guide to reproduce the behavior. (Optional bug recommended)
+      placeholder: |
+        1. Step One
+        2. Step Two
+        3. Step Three
+        ...
+    validations:
+      required: false
+  - type: dropdown
+    id: version
+    attributes:
+      label: Version
+      description: The affected versions.
+      multiple: true
+      options:
+      - 0.1.0-alpha
+    validations:
+      required: true
+  - type: textarea
+    id: additional
+    attributes:
+      label: Other information
+      description: Other information you want to tell us.
+      placeholder: This might be related to #3784
+    validations:
+      required: true
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: Additional checks
+      description: Please check the following.
+      options:
+        - label: I read the FAQ and Wiki and am sure this is a bug.
+          required: true
+        - label: I checked if there isn't already an open issue of this bug.
+          required: true
