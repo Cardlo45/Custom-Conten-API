@@ -1,0 +1,13 @@
+main: carslo.mods.test_plugin_kotlin.KotlinPlugin
+
+name: TestPluginKotlin
+author: [Carslo_45]
+version: 0.1
+api-version: 1.21.4
+
+depends: [Kotlin]
+
+commands:
+  test:
+    description: Test some stuff
+    permission: test_plugin_kotlin.commands.test
