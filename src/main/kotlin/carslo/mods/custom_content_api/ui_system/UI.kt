@@ -1,10 +1,9 @@
-package carslo.mods.test_plugin_kotlin.UISystem
+package carslo.mods.custom_content_api.UISystem
 
-import carslo.mods.test_plugin_kotlin.ItemSystem.CustomItem
-import carslo.mods.test_plugin_kotlin.KotlinPlugin
+import carslo.mods.custom_content_api.CustomContentAPI
+import carslo.mods.custom_content_api.ItemSystem.CustomItem
 import org.bukkit.Bukkit
 import org.bukkit.Material
-import org.bukkit.NamespacedKey
 import org.bukkit.entity.Player
 import org.bukkit.event.EventHandler
 import org.bukkit.event.HandlerList
@@ -16,7 +15,6 @@ import org.bukkit.event.inventory.InventoryType
 import org.bukkit.event.player.PlayerSwapHandItemsEvent
 import org.bukkit.inventory.Inventory
 import org.bukkit.inventory.ItemStack
-import org.bukkit.persistence.PersistentDataType
 
 public class UI : Listener {
     public var preventUnregister = false
@@ -25,14 +23,14 @@ public class UI : Listener {
     private var actions: HashMap<Int, (Player) -> Unit> = hashMapOf()
 
     public constructor(name: String, uiType: InventoryType) {
-        KotlinPlugin.pluginManager.registerEvents(this, KotlinPlugin.instance)
+        CustomContentAPI.pluginManager.registerEvents(this, CustomContentAPI.instance)
         container = Bukkit.createInventory(null, uiType, name)
     }
 
     public constructor(name: String, uiSize: Int) {
         if (uiSize % 9 != 0) throw IllegalArgumentException("uiSize must be a multiple of 9.")
         if (uiSize > 54) throw IllegalArgumentException("uiSize must be 54 or smaller.")
-        KotlinPlugin.pluginManager.registerEvents(this, KotlinPlugin.instance)
+        CustomContentAPI.pluginManager.registerEvents(this, CustomContentAPI.instance)
         container = Bukkit.createInventory(null, uiSize, name)
     }
 

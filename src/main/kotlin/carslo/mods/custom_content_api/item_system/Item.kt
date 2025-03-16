@@ -1,4 +1,4 @@
-package carslo.mods.test_plugin_kotlin.ItemSystem
+package carslo.mods.custom_content_api.ItemSystem
 
 import org.bukkit.Material
 import org.bukkit.inventory.ItemStack

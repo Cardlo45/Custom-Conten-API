@@ -1,9 +1,9 @@
-package carslo.mods.test_plugin_kotlin.Commands
+package carslo.mods.custom_content_api.Commands
 
-import carslo.mods.test_plugin_kotlin.ItemSystem.ActionItem
-import carslo.mods.test_plugin_kotlin.ItemSystem.CustomItem
-import carslo.mods.test_plugin_kotlin.KotlinPlugin
-import carslo.mods.test_plugin_kotlin.UISystem.*
+import carslo.mods.custom_content_api.ItemSystem.ActionItem
+import carslo.mods.custom_content_api.ItemSystem.CustomItem
+import carslo.mods.custom_content_api.CustomContentAPI
+import carslo.mods.custom_content_api.UISystem.*
 import java.util.UUID
 import org.bukkit.Material
 import org.bukkit.command.Command
@@ -23,7 +23,7 @@ public class TestCommand : TabExecutor {
             args: Array<out String>
     ): Boolean {
         if (sender is ConsoleCommandSender) {
-            KotlinPlugin.log.info("The Test Command can only be used as a Player.")
+            CustomContentAPI.log.info("The Test Command can only be used as a Player.")
             return true
         }
         if (!(sender is Player)) {
@@ -78,7 +78,7 @@ public class TestCommand : TabExecutor {
             }
             else -> {
                 var cItem: CustomItem? =
-                        KotlinPlugin.itemList.find { it.item.customID == args[1].lowercase() }?.item
+                        CustomContentAPI.itemList.find { it.item.customID == args[1].lowercase() }?.item
                 if (cItem == null) {
                     return SendHelp(sender, arrayOf("help", "give"))
                 }
@@ -164,7 +164,7 @@ public class TestCommand : TabExecutor {
                         }
                         "give" -> {
                             completion += "diamond"
-                            for (i: ActionItem in KotlinPlugin.itemList) {
+                            for (i: ActionItem in CustomContentAPI.itemList) {
                                 completion += i.item.customID
                             }
                         }

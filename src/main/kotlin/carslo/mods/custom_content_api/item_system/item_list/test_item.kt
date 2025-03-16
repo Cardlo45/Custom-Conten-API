@@ -1,7 +1,7 @@
-package carslo.mods.test_plugin_kotlin.ItemSystem.ItemList
+package carslo.mods.custom_content_api.ItemSystem.ItemList
 
-import carslo.mods.test_plugin_kotlin.ItemSystem.ActionItem
-import carslo.mods.test_plugin_kotlin.ItemSystem.CustomItem
+import carslo.mods.custom_content_api.ItemSystem.ActionItem
+import carslo.mods.custom_content_api.ItemSystem.CustomItem
 
 import org.bukkit.event.player.PlayerInteractEvent
 import org.bukkit.Material

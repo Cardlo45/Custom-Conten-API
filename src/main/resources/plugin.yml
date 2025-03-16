@@ -1,6 +1,6 @@
-main: carslo.mods.test_plugin_kotlin.KotlinPlugin
+main: carslo.mods.custom_content_api.CustomContentAPI
 
-name: TestPluginKotlin
+name: CustomContentAPI
 author: [Carslo_45]
 version: 0.1
 api-version: 1.21.4
@@ -10,4 +10,4 @@ depends: [Kotlin]
 commands:
   test:
     description: Test some stuff
-    permission: test_plugin_kotlin.commands.test
+    permission: custom_content_api.commands.test

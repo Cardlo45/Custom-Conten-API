@@ -1,16 +1,15 @@
-package carslo.mods.test_plugin_kotlin
+package carslo.mods.custom_content_api
 
-import carslo.mods.test_plugin_kotlin.Commands.TestCommand
-import carslo.mods.test_plugin_kotlin.ItemSystem.ItemList.TestItem
-import carslo.mods.test_plugin_kotlin.ItemSystem.CustomItem
-import carslo.mods.test_plugin_kotlin.ItemSystem.ActionItem
+import carslo.mods.custom_content_api.Commands.TestCommand
+import carslo.mods.custom_content_api.ItemSystem.ActionItem
+import carslo.mods.custom_content_api.ItemSystem.ItemList.TestItem
 import java.util.logging.Logger
 import org.bukkit.plugin.PluginManager
 import org.bukkit.plugin.java.JavaPlugin
 
-public class KotlinPlugin : JavaPlugin() {
+public class CustomContentAPI : JavaPlugin() {
     companion object {
-        public lateinit var instance: KotlinPlugin
+        public lateinit var instance: CustomContentAPI
             private set
         public lateinit var log: Logger
             private set
@@ -22,8 +21,8 @@ public class KotlinPlugin : JavaPlugin() {
 
     override fun onEnable() {
         instance = this
-        log = this.logger
-        pluginManager = this.server.pluginManager
+        log = logger
+        pluginManager = server.pluginManager
 
         itemList = listOf()
 

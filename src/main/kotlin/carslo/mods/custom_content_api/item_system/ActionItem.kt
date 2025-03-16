@@ -1,4 +1,4 @@
-package carslo.mods.test_plugin_kotlin.ItemSystem
+package carslo.mods.custom_content_api.ItemSystem
 
 import org.bukkit.entity.Player
 import org.bukkit.event.EventHandler
@@ -10,14 +10,14 @@ import org.bukkit.inventory.ItemStack
 import org.bukkit.inventory.PlayerInventory
 import org.bukkit.inventory.EquipmentSlot
 import org.bukkit.Material
-import carslo.mods.test_plugin_kotlin.ItemSystem.CustomItem
-import carslo.mods.test_plugin_kotlin.KotlinPlugin
+import carslo.mods.custom_content_api.ItemSystem.CustomItem
+import carslo.mods.custom_content_api.CustomContentAPI
 
 public abstract class ActionItem : Listener {
     public lateinit var item: CustomItem
 
     public constructor() {
-        KotlinPlugin.itemList += this
+        CustomContentAPI.itemList += this
     }
 
     public abstract fun CanLeftClick(e: PlayerInteractEvent): Boolean

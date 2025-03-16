@@ -1,6 +1,6 @@
-package carslo.mods.test_plugin_kotlin.ItemSystem
+package carslo.mods.custom_content_api.ItemSystem
 
-import carslo.mods.test_plugin_kotlin.KotlinPlugin
+import carslo.mods.custom_content_api.CustomContentAPI
 import org.bukkit.Material
 import org.bukkit.NamespacedKey
 import org.bukkit.inventory.ItemStack
@@ -12,14 +12,14 @@ public class CustomItem : Item {
     public var customID: String
         get() =
                 persistentDataContainer.get(
-                        NamespacedKey(KotlinPlugin.instance, "custom_id"),
+                        NamespacedKey(CustomContentAPI.instance, "custom_id"),
                         PersistentDataType.STRING
                 )
                         ?: ""
         set(value: String) {
             var meta: ItemMeta = itemMeta
             meta.persistentDataContainer.set(
-                    NamespacedKey(KotlinPlugin.instance, "custom_id"),
+                    NamespacedKey(CustomContentAPI.instance, "custom_id"),
                     PersistentDataType.STRING,
                     value
             )
@@ -29,14 +29,14 @@ public class CustomItem : Item {
     public var itemVersion: Int
         get() =
                 persistentDataContainer.get(
-                        NamespacedKey(KotlinPlugin.instance, "item_version"),
+                        NamespacedKey(CustomContentAPI.instance, "item_version"),
                         PersistentDataType.INTEGER
                 )
                         ?: -1
         set(value: Int) {
             var meta: ItemMeta = itemMeta
             meta.persistentDataContainer.set(
-                    NamespacedKey(KotlinPlugin.instance, "item_version"),
+                    NamespacedKey(CustomContentAPI.instance, "item_version"),
                     PersistentDataType.INTEGER,
                     value
             )
