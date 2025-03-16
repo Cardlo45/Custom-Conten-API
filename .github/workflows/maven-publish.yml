@@ -15,3 +15,4 @@ jobs:
         with:
           files: ./target/*.jar
           draft: true
+          token: ${{ github.token }}
