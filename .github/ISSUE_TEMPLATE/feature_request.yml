@@ -1,0 +1,40 @@
+name: Feature Request
+description: Request a Feature.
+title: "[Feature]: "
+labels: ["enhancement"]
+assignees:
+  - Cardlo45
+
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: Describe the Feature
+      description: Explain WHAT the Feature is supposed to be.
+      placeholder: Add X to Y
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Usecase
+      description: Explain why you want the Feature.
+      placeholder: Add X to Y
+    validations:
+      required: true
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional information
+      description: Additional information you want to tell us. (Optional)
+      placeholder: This would solve #9999
+    validations:
+      required: false
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: Additional checks
+      description: Please check the following.
+      options:
+        - label: I checked if there isn't already a issue for a similar feature.
+          required: true
