@@ -1,9 +1,9 @@
-name: Bug Report YAML
+name: Bug Report
 description: Report a bug.
-title: "[Bug]:"
+title: "[Bug]: "
 labels: ["bug"]
 assignees:
-  - carslo_45
+  - Cardlo45
 
 body:
   - type: textarea
@@ -40,9 +40,9 @@ body:
   - type: textarea
     id: additional
     attributes:
-      label: Other information
-      description: Other information you want to tell us.
-      placeholder: This might be related to #3784
+      label: Additional information
+      description: Additional information you want to tell us.
+      placeholder: This might be related to #9999
     validations:
       required: true
   - type: checkboxes
